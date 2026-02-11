@@ -1,6 +1,6 @@
 - name: Hello world 
   hots: web
   tasks: 
-   - name: Hello World! print
-     ansible.builtin.debug:
+  - name: Hello World! print
+    ansible.builtin.debug:
       msg: "Hello World!"
