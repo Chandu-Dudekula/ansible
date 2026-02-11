@@ -1,0 +1,28 @@
+- name: "Chandu Dudekula"
+  dob: 1999-01-01
+  mobileNumber: 1234567890
+  addresses:
+  - flat: 09
+    street: "kalpatru layout"
+    city: bangalore
+    type: permanent
+
+  - flat: 09
+    street: "kalpatru layout"
+    city: bangalore
+    type: current    
+
+
+- name: "Mastan Dudekula"
+  dob: 1990-01-01
+  mobileNumber: 1234567890
+  addresses:
+  - flat: 09
+    street: "kalpatru layout"
+    city: bangalore
+    type: permanent
+
+  - flat: 09
+    street: "kalpatru layout"
+    city: bangalore
+    type: current
