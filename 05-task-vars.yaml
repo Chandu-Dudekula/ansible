@@ -1,0 +1,13 @@
+- name: play level variables
+  hosts: local
+  connection: local
+  vars: 
+   COURSE: "DEVOPS WITH AWS"
+   DURATION: "3MONTHS"
+   TRAINER: "SIVAKUMAR REDDY"
+  tasks:
+   - name: print variables
+     vars: 
+       COURSE: Ansible # it will override the above play level varibale COURSE
+     ansible.builtin.debug:   
+       msg: " course is: {{ COURSE }}, Trainer is: {{ TRAINER }} and duration is: {{ DURATION }}"
