@@ -3,4 +3,9 @@
   tasks: 
    - name: ping hosts
      ansible.builtin.ping:
-     
+
+
+
+
+     # command to execute the playbook in ansible
+     # ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=<password> 01-playbook.yaml
