@@ -1,0 +1,14 @@
+- name: case conversion of strings
+  hosts: local
+  connection: local
+  vars:
+   course: "AWS with DevOps"
+   Trainer: "DEVSECOPS AND AWS"
+  tasks:
+  - name: convert lower to uppercase
+    ansible.builtin.debug:
+     msg: "{{ course | upper }}" # convert lower case to uppercase 
+
+  - name: convert Upper case to lower
+    ansible.builtin.debug:
+     msg: "{{ Tariner | lower }}" # convert uppercase to lowercase
