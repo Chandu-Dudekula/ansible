@@ -3,6 +3,10 @@
   connection: local
   vars: 
    topics: Linux, Shell, Ansible, terraform  # string datatype
+   tagslist:
+    name: ansible
+    project: roboshop
+    component: catalogue
   tasks:
   - name: Greetings
     ansible.builtin.debug:
@@ -10,4 +14,9 @@
   
   - name: convert string to list
     ansible.builtin.debug:
-     msg: "{{ topics | split (',') }}"
+     msg: "{{ topics | split (',') }}" # converting string into list using split using ansible filters.
+
+  - name: convert maps to list
+    ansible.builtin.debug:
+     msg: "{{ tagslist | dict2items }}" # converting maps/dictonary to list datatypes using ansible filters.
+     
