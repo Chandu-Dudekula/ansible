@@ -1,0 +1,9 @@
+#we can pass variables in arguments while executing the playbook like how we did shell scripts(when executing scripts).
+- name: Argument level variables
+  hosts: local
+  connection: local
+  tasks:
+  - name: print variables from arguments
+    ansible.builtin.debug:
+     msg: "Aws Trainer is {{ NAME }}"
+     
