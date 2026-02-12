@@ -11,4 +11,4 @@
 
   - name: convert Upper case to lower
     ansible.builtin.debug:
-     msg: "{{ Tariner | lower }}" # convert uppercase to lowercase
+     msg: "{{ Trainer | lower }}" # convert uppercase to lowercase
