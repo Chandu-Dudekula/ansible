@@ -3,8 +3,8 @@
   connection: local
   vars:
    NAME: "Ansible from PLAY"
-  vars_files:
-  - course.yaml
+  # vars_files:
+  # - course.yaml
   vars_prompt:
   - name: NAME
     prompt: enter name
@@ -27,3 +27,4 @@
 # How Ansible will give the prefernce or priority from different levels
 # 1st preference/priority is Agrument variables
 # 2nd preference/priority is Task Variables
+# 3rd preference/priority is File variables
