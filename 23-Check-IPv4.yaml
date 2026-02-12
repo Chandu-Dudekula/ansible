@@ -1,0 +1,9 @@
+- name: Check Valid IPv4
+  hosts: local
+  connection: local
+  vars: 
+   myIp: 192.287.78.114
+  tasks:
+  - name: validate IPv4 address
+    ansible.builtin.debug:
+     msg: "{{ myIp | ansible.utils.ipv4 }}" # ansible.utils.ipv4 check the valid IPv4 or not its a filter in ansible
