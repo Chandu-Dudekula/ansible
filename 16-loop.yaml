@@ -1,0 +1,12 @@
+- name: loops in ansible
+  hosts: local
+  connection: local
+  tasks:
+  - name: print names
+    ansible.builtin.debug:
+     msg: " Hi {{ item }}"  # item is reserverd keyword for loop value replacement in ansible.
+    loop:
+    - ramesh
+    - raju
+    - rajesh
+    
