@@ -4,9 +4,8 @@
   tasks:
   - name: read students yaml file
     ansible.builtin.set_fact:    # setting or declaring variable dynamically 
-    students_yaml: "{{ lookup('file', 'students.yaml') | from_yaml }}" # lookup will looks the file students.yaml file and from_yaml is a filter to store the yaml data to variable.
+     students_yaml: "{{ lookup('file', 'students.yaml') | from_yaml }}" # lookup will looks the file students.yaml file and from_yaml is a filter to store the yaml data to variable.
 
   - name: covert YAML into JSON
     ansible.builtin.debug:
      msg: "{{ students_yaml | to_nice_json }}" # students_yaml variable having yaml content and to_nice_json filter will covert into json format.
-     
