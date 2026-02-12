@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars: 
-   myIp: 192.287.78.114
+   myIp: 192.216.78.114
   tasks:
   - name: validate IPv4 address
     ansible.builtin.debug:
