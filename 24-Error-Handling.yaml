@@ -4,7 +4,8 @@
   tasks:
    - name: checking the user exists
      ansible.builtin.command: id roboshop  # checking user roboshop is present or not using ansible.builtin.command
-     register: user_output 
+     register: user_output   # it will fail here further execution sincce user roboshop not present
+     ignore_errors: true  # it will ignore the error and proceed the further execution of code
 
    - name: print output
      ansible.builtin.debug:
