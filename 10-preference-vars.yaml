@@ -11,8 +11,8 @@
     private: false
   tasks:
   - name: print name
-    vars: 
-      NAME: "Ansible from tasks"
+    # vars: 
+    #   NAME: "Ansible from tasks"
     ansible.builtin.debug:
         msg: "Hi {{ NAME }}"
 
@@ -25,3 +25,5 @@
 
 
 # How Ansible will give the prefernce or priority from different levels
+# 1st preference/priority is Agrument variables
+# 2nd preference/priority is Task Variables
