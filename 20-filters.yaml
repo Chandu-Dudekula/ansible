@@ -3,10 +3,25 @@
   connection: local
   vars: 
    topics: Linux, Shell, Ansible, terraform  # string datatype
-   tagslist:
+   tagsmap:
     name: ansible
     project: roboshop
     component: catalogue
+    tagslist: [
+        {
+            "key": "name",
+            "value": "ansible"
+        },
+        {
+            "key": "project",
+            "value": "roboshop"
+        },
+        {
+            "key": "component",
+            "value": "catalogue"
+        }
+    ]
+      
   tasks:
   - name: Greetings
     ansible.builtin.debug:
@@ -16,7 +31,10 @@
     ansible.builtin.debug:
      msg: "{{ topics | split (',') }}" # converting string into list using split using ansible filters.
 
-  - name: convert maps to list
+  - name: convert maps/dict to list
     ansible.builtin.debug:
-     msg: "{{ tagslist | dict2items }}" # converting maps/dictonary to list datatypes using ansible filters.
-     
+     msg: "{{ tagsmap | dict2items }}" # converting maps/dictonary to list datatypes using ansible filters.
+
+  - name: convert list to map/dict
+    ansible.builtin.debug:
+     msg: "{{ tagslist | items2dict }}" # converting  list to map/dict datatypes using ansible filters.
