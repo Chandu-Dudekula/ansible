@@ -1,0 +1,13 @@
+- name: demo on filters
+  hosts: local
+  connection: local
+  vars: 
+   topics: Linux, Shell, Ansible, terraform  # string datatype
+  tasks:
+  - name: Greetings
+    ansible.builtin.debug:
+     msg: " Hi, Chandu {{ GREETING | default('Good morning')}}" # here we passing variable as default and passing arguments in default as good morning
+  
+  - name: convert string to list
+    ansible.builtin.debug:
+     msg: "{{ topics | split (',') }}"
