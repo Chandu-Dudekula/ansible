@@ -4,4 +4,4 @@
   tasks:
   - name: Greetings
     ansible.builtin.debug:
-     msg: " Hi, Chandu {{ GREETING | default(Good morning)}}" # here we passing variable as default and passing arguments in default as good morning
+     msg: " Hi, Chandu {{ GREETING | default('Good morning')}}" # here we passing variable as default and passing arguments in default as good morning
