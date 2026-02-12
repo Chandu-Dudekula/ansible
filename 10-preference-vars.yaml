@@ -1,0 +1,19 @@
+# How Ansible will give the prefernce or priority from different levels
+- name: preference variables
+  hosts: local
+  connection: local
+  vars:
+   NAME: "Ansible from PLAY"
+  vars_file:
+  - course.yaml
+  vars_prompt:
+  - name: NAME
+    prompt: enter name
+    private: false
+  tasks:
+  - name: print name
+    vars: 
+      NAME: " Ansible from tasks"
+    ansible.builtin.debug:
+        msg: "Hi {{ NAME }}"
+
