@@ -1,4 +1,3 @@
-# How Ansible will give the prefernce or priority from different levels
 - name: preference variables
   hosts: local
   connection: local
@@ -17,3 +16,12 @@
     ansible.builtin.debug:
         msg: "Hi {{ NAME }}"
 
+
+
+
+
+
+
+
+
+# How Ansible will give the prefernce or priority from different levels
