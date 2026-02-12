@@ -15,3 +15,7 @@
    - name: craete a user
      ansible.builtin.command: useradd roboshop
      when: user_output.rc != 0   
+
+     # In 1st eexcution it will ignore the Error and return code is 1 after that user will create.
+     # In second exceution user already created and return code is 0 
+    
