@@ -10,3 +10,8 @@
     ansible.builtin.debug:
      msg: "Yes, Package is Redhat"  
     when: ansible_facts.os_family == "RedHat" 
+
+  - name: check debain or not
+    ansible.builtin.debug:
+     msg: "Yes, Package is debain"  
+    when: ansible_facts.os_family == "Debain"   
