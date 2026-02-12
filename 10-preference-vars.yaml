@@ -5,10 +5,10 @@
    NAME: "Ansible from PLAY"
   # vars_files:
   # - course.yaml
-  vars_prompt:
-  - name: NAME
-    prompt: enter name
-    private: false
+  # vars_prompt:
+  # - name: NAME
+  #   prompt: enter name
+  #   private: false
   tasks:
   - name: print name
     # vars: 
@@ -28,3 +28,4 @@
 # 1st preference/priority is Agrument variables
 # 2nd preference/priority is Task Variables
 # 3rd preference/priority is File variables
+# 4th preference/priority is Prompt Variables
