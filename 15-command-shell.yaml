@@ -14,7 +14,7 @@
   
   - name: testing ansible command and shell modules
     ansible.builtin.shell: ls -ltr /home/ec2-user > file.txt
-    register: file_output
+    register: file_output  # here the register keyword declare the file_output variable to save the about command output.
     
   - name: print output
     ansible.builtin.debug:
