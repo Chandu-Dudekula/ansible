@@ -1,0 +1,12 @@
+- name: demo on conditions
+  hosts: local
+  connection: local
+  vars:
+   IS_LIVE: true
+  tasks:
+  - name: check live or not
+    ansible.builtin.debug:
+     msg: " yes, its Live now"
+  when: IS_LIVE 
+
+  # here when IS_LIVE is true in vars then it will print "Yes, its Live now" else means if it false it wont print anything its just skip msg. 
