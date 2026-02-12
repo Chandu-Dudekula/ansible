@@ -3,5 +3,6 @@
   connection: local
   tasks:
   - name: ansible command module testing
-    ansible.builtin.command: cat /etc/passwd | grep root
-    register: user_output
+    # ansible.builtin.command: cat /etc/passwd | grep root
+    ansible.builtin.shell: cat /etc/passwd | grep root
+    register: user_output   # here the register keyword used to store the output of the command ansible.builtin.command/shell modules 
