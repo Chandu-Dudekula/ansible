@@ -1,0 +1,16 @@
+- name: Play- 1
+  hosts: local
+  connection: local
+  tasks:
+  - name: Playbook-1 and task 1
+    ansible.builtin.debug:
+     msg: "Hello Playbook -1 and task-1 execution."
+
+- name: Play- 2
+  hosts: local
+  connection: local
+  tasks:
+  - name: Playbook 2 and task 2
+    ansible.builtin.debug:
+     msg: " Hello Playbook -2 and task-2 execution."
+     
