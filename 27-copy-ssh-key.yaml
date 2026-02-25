@@ -2,7 +2,7 @@
   hosts: all
   become: yes
   vars:
-    ansible_user: root   # or initial login user
+    ansible_user: ec2-user   # or initial login user
   tasks:
     - name: Install Ansible controller public key
       authorized_key:
