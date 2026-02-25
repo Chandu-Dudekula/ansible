@@ -38,3 +38,4 @@
   - name: convert list to map/dict
     ansible.builtin.debug:
      msg: "{{ tagslist | items2dict }}" # converting  list to map/dict datatypes using ansible filters.
+  

@@ -1,0 +1,18 @@
+- name: Copy SSH public key to all remote servers
+  hosts: all
+  become: yes
+  vars:
+    ansible_user: root   # or initial login user
+  tasks:
+    - name: Install Ansible controller public key
+      authorized_key:
+        user: ansible
+        state: present
+        key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+
+
+# Reads public key from controller
+
+# Appends it to ~ansible/.ssh/authorized_keys
+
+# Avoids duplicates automatically

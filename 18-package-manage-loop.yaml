@@ -11,3 +11,4 @@
     - { name: "mysql", state: "absent"} # here items is dict/maps datatype
     - { name: "nginx", state: "present"}
     - { name: "zip", state: "present"}
+    
